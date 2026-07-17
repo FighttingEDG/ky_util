@@ -6,19 +6,18 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-public class CardVO {
+public class DailyTaskVO {
 
     private Long id;
+    private LocalDate taskDate;
     private Long subjectId;
     private String subjectName;
-    private String front;
-    private String back;
-    private String tags;
-    private Integer difficulty;
-    private Integer stage;
-    private LocalDate nextReviewDate;
-    private Long knowledgeNodeId;
-    private String imageUrl;
+    private String title;
+    private String content;
+    private Integer estimatedMinutes;
+    private Integer actualMinutes;
+    private Integer priority;
+    private String status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

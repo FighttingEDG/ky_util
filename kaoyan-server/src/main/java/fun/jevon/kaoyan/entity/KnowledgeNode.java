@@ -10,40 +10,34 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "mistake")
-public class Mistake {
+@Table(name = "knowledge_node")
+public class KnowledgeNode {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "subject_id", nullable = false)
+    @JoinColumn(name = "subject_id")
     private Subject subject;
 
-    @Column(name = "question", nullable = false, length = 4000)
-    private String question;
+    @Column(name = "code", length = 64)
+    private String code;
 
-    @Column(name = "correct_answer", nullable = false, length = 4000)
-    private String correctAnswer;
+    @Column(name = "name", nullable = false, length = 128)
+    private String name;
 
-    @Column(name = "wrong_answer", length = 4000)
-    private String wrongAnswer;
+    @Column(name = "description", length = 4000)
+    private String description;
 
-    @Column(name = "analysis", length = 4000)
-    private String analysis;
+    @Column(name = "parent_id")
+    private Long parentId;
 
-    @Column(name = "wrong_reason", length = 64)
-    private String wrongReason;
+    @Column(name = "level")
+    private Integer level = 3;
 
-    @Column(name = "tags", length = 255)
-    private String tags;
-
-    @Column(name = "difficulty")
-    private Integer difficulty = 3;
-
-    @Column(name = "source", length = 128)
-    private String source;
+    @Column(name = "weight")
+    private Integer weight = 5;
 
     @Column(name = "stage")
     private Integer stage = 0;
@@ -51,11 +45,11 @@ public class Mistake {
     @Column(name = "next_review_date", nullable = false)
     private LocalDate nextReviewDate;
 
+    @Column(name = "mastery_rate")
+    private Integer masteryRate = 0;
+
     @Column(name = "image_url", length = 1000)
     private String imageUrl;
-
-    @Column(name = "knowledge_node_id")
-    private Long knowledgeNodeId;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)

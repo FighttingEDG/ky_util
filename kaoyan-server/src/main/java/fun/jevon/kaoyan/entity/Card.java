@@ -39,6 +39,12 @@ public class Card {
     @Column(name = "next_review_date", nullable = false)
     private LocalDate nextReviewDate;
 
+    @Column(name = "image_url", length = 1000)
+    private String imageUrl;
+
+    @Column(name = "knowledge_node_id")
+    private Long knowledgeNodeId;
+
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

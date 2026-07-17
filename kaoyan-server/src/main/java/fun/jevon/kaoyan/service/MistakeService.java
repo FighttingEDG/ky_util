@@ -70,6 +70,8 @@ public class MistakeService {
         mistake.setTags(vo.getTags());
         mistake.setDifficulty(vo.getDifficulty());
         mistake.setSource(vo.getSource());
+        mistake.setKnowledgeNodeId(vo.getKnowledgeNodeId());
+        mistake.setImageUrl(vo.getImageUrl());
         return convertToVO(mistakeRepository.save(mistake));
     }
 

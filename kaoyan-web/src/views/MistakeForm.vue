@@ -72,6 +72,10 @@
         <el-input v-model="form.source" placeholder="如：2024 真题、张宇 1000 题" />
       </el-form-item>
 
+      <el-form-item label="图片">
+        <FilePicker v-model="form.imageUrl" button-text="上传题目/答案图片" />
+      </el-form-item>
+
       <el-form-item>
         <el-button type="primary" @click="submit">保存</el-button>
         <el-button @click="$router.push('/mistakes')">取消</el-button>
@@ -86,6 +90,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { createMistake, getMistake, updateMistake } from '../api/mistake.js'
 import { getSubjects } from '../api/card.js'
+import FilePicker from '../components/FilePicker.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -103,7 +108,8 @@ const form = ref({
   wrongReason: '',
   tags: '',
   difficulty: 3,
-  source: ''
+  source: '',
+  imageUrl: ''
 })
 
 const loadSubjects = async () => {
@@ -124,7 +130,8 @@ const loadMistake = async () => {
     wrongReason: m.wrongReason,
     tags: m.tags,
     difficulty: m.difficulty,
-    source: m.source
+    source: m.source,
+    imageUrl: m.imageUrl || ''
   }
 }
 

@@ -21,6 +21,8 @@ public class MistakeVO {
     private String source;
     private Integer stage;
     private LocalDate nextReviewDate;
+    private Long knowledgeNodeId;
+    private String imageUrl;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

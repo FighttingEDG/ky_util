@@ -68,6 +68,8 @@ public class CardService {
         card.setBack(vo.getBack());
         card.setTags(vo.getTags());
         card.setDifficulty(vo.getDifficulty());
+        card.setKnowledgeNodeId(vo.getKnowledgeNodeId());
+        card.setImageUrl(vo.getImageUrl());
         return convertToVO(cardRepository.save(card));
     }
 

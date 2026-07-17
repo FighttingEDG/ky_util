@@ -39,6 +39,10 @@
         <el-rate v-model="form.difficulty" :max="5" />
       </el-form-item>
 
+      <el-form-item label="图片">
+        <FilePicker v-model="form.imageUrl" button-text="选择关联图片" />
+      </el-form-item>
+
       <el-form-item>
         <el-button type="primary" @click="submit">保存</el-button>
         <el-button @click="$router.push('/cards')">取消</el-button>
@@ -52,6 +56,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { getSubjects, createCard, getCard, updateCard } from '../api/card.js'
+import FilePicker from '../components/FilePicker.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -63,7 +68,8 @@ const form = ref({
   front: '',
   back: '',
   tags: '',
-  difficulty: 3
+  difficulty: 3,
+  imageUrl: ''
 })
 
 const loadSubjects = async () => {
@@ -80,7 +86,8 @@ const loadCard = async () => {
     front: card.front,
     back: card.back,
     tags: card.tags,
-    difficulty: card.difficulty
+    difficulty: card.difficulty,
+    imageUrl: card.imageUrl || ''
   }
 }
 
