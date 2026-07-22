@@ -26,6 +26,12 @@
         <el-menu-item index="/knowledge/review">今日复习</el-menu-item>
         <el-menu-item index="/knowledge/recommend">薄弱推荐</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="/words">
+        <template #title>背单词</template>
+        <el-menu-item index="/words/study">学习模式</el-menu-item>
+        <el-menu-item index="/words/list">单词库</el-menu-item>
+        <el-menu-item index="/words/stats">学习报告</el-menu-item>
+      </el-sub-menu>
       <el-menu-item index="/files">文件管理</el-menu-item>
     </el-menu>
     <div class="main">

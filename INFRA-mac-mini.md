@@ -17,7 +17,7 @@
 
 - MinIO 实际部署在本机（Mac Mini）上。
 - 通过 frp 把 MinIO 服务转发到阿里云服务器 `120.55.112.67`。
-- 阿里云服务器再通过域名 `minio.shanjunwei.shop` 暴露到公网。
+- 阿里云服务器再通过域名 `minio.shanjunwei.fun` 暴露到公网（控制台与 API 同域名，当前仅 HTTP）。
 
 ## 待验证内容
 

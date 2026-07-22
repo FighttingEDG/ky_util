@@ -13,6 +13,9 @@ import KnowledgeNodeList from '../views/KnowledgeNodeList.vue'
 import KnowledgeReview from '../views/KnowledgeReview.vue'
 import KnowledgeRecommend from '../views/KnowledgeRecommend.vue'
 import FileManager from '../views/FileManager.vue'
+import WordStudy from '../views/WordStudy.vue'
+import WordList from '../views/WordList.vue'
+import WordStats from '../views/WordStats.vue'
 
 const routes = [
   { path: '/', redirect: '/cards' },
@@ -31,7 +34,10 @@ const routes = [
   { path: '/knowledge/nodes', component: KnowledgeNodeList },
   { path: '/knowledge/review', component: KnowledgeReview },
   { path: '/knowledge/recommend', component: KnowledgeRecommend },
-  { path: '/files', component: FileManager }
+  { path: '/files', component: FileManager },
+  { path: '/words/study', component: WordStudy },
+  { path: '/words/list', component: WordList },
+  { path: '/words/stats', component: WordStats }
 ]
 
 export default createRouter({
