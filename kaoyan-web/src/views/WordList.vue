@@ -96,7 +96,7 @@ const query = reactive({
   stage: null,
   keyword: '',
   page: 1,
-  size: 20
+  size: 10
 })
 
 const fetch = async () => {
