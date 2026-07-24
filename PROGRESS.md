@@ -215,6 +215,7 @@ Mac Mini  （MinIO 实际部署机器）
 - 2026-07-22：新增单词学习模块，含 Excel 自动导入（必背词+主考词）、沉浸式学习 UI、XP/streak 游戏化、发音、学习报告。
 - 2026-07-22：优化语音发音（优先 Samantha/Alex/Google US English），新增手动重新导入按钮（单词库页面）。
 - 2026-07-22：新增语速调节入口（学习页面右上角，0.6-1.2 可选）。
+- 2026-07-24：单词库分页优化：默认每页 10 条，可选 10/20/50/100，支持显示总数和跳页。
 - 2026-07-13：新增 `INFRA-aliyun-server.md`、`INFRA-mac-mini.md` 基础设施文档（初版，待 SSH 验证）。
 - 2026-07-14：SSH 验证阿里云服务器：frps（`/opt/frp/frps.ini`，bind_port 9902）+ nginx 已配置；确认 MinIO API 独立域名 `minioapi.shanjunwei.shop`；`application.properties` 的 `minio.endpoint` 同步更新；验证记录写入 `INFRA-aliyun-server.md`。
 - 2026-07-17：整理 PROGRESS.md，同步 07-14 服务器验证结果与 MinIO 双域名信息；清理 `INFRA-aliyun-server.md` 旧草稿，补全 frps 配置代码块与待办清单。
